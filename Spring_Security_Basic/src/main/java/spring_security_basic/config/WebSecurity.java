@@ -29,7 +29,7 @@ public class WebSecurity {
 //                .formLogin(Customizer.withDefaults());
         httpSecurity.csrf(AbstractHttpConfigurer::disable);
         httpSecurity.addFilterBefore(new UserFilter(), UsernamePasswordAuthenticationFilter.class);
-        httpSecurity.headers(header->header.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
+//        httpSecurity.headers(header->header.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
        return httpSecurity.build();
     }
 //    @Bean
